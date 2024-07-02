@@ -23,7 +23,7 @@
     ],
     "paths": {
       "@helm": [
-        ".\\src/lib/helm/*"
+        "./src/lib/helm"
       ]
     }
   },

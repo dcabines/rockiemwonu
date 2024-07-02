@@ -1,14 +1,10 @@
 import { Routes } from '@angular/router';
-import { AuthModule } from './auth/auth.module';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
-  },
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-  }
-
+  { path: '', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '**', component: NotFoundComponent },
 ];

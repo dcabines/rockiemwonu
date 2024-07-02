@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
-import { SignupComponent } from '../signup/signup.component';
-import { LoginService } from '../../../services/authservice/login.service';
-import { ToastService } from '../../../services/toast/toast.service';
 import { NgxSpinnerService } from 'ngx-spinner';
-import * as helm from '../../../../lib/helm';
+import { LoginService } from '../../services/authservice/login.service';
+import { ToastService } from '../../services/toast/toast.service';
+import * as helm from '@helm';
 
 @Component({
-  selector: 'app-login',
   standalone: true,
   imports: [...helm.directives],
   templateUrl: './login.component.html',
@@ -19,22 +16,10 @@ export class LoginComponent {
   password: string = '';
 
   constructor(private router: Router,
-    private dialog: MatDialog,
     private loginService: LoginService,
     private toastService: ToastService,
     private spinner: NgxSpinnerService
   ) { }
-
-  ngOnInit(): void { }
-
-  onSubmit(loginForm: any) {
-    this.spinner.show();
-    const user = {
-      email: this.username,
-      password: this.password
-    };
-    this.onLogin(user);
-  }
 
   onLogin(user: any) {
     this.loginService.loginUser(user).subscribe(
@@ -50,13 +35,5 @@ export class LoginComponent {
         console.error('Login error:', error);
       }
     );
-  }
-
-
-  openSignupModal() {
-    const dialogRef = this.dialog.open(SignupComponent, {
-      width: '80%',
-      height: '60%',
-    });
   }
 }

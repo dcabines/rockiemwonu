@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '../../../services/task/task.service';
 import { FormsModule } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { ToastService } from '../../../services/toast/toast.service';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -40,9 +38,10 @@ export class HomeComponent {
   isEditMode: boolean = false;
   taskToEdit: Task | null = null;
   isAddTaskExpanded: boolean = false;
-  constructor(private taskService: TaskService,
+  constructor(
+    // private taskService: TaskService,
     private spinner: NgxSpinnerService,
-    private toastService: ToastService,
+    // private toastService: ToastService,
     private router: Router
   ) { }
 
@@ -56,7 +55,7 @@ export class HomeComponent {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          this.tasks = await firstValueFrom(this.taskService.getTasks());
+          // this.tasks = await firstValueFrom(this.taskService.getTasks());
         } catch (error) {
           console.error('Failed to load tasks', error);
         } finally {
@@ -70,8 +69,8 @@ export class HomeComponent {
     if (this.newTask.title) {
       this.showSpinner();
       try {
-        await firstValueFrom(this.taskService.addTask(this.newTask));
-        this.toastService.showSuccess('Task added successfully', 'Success');
+        // await firstValueFrom(this.taskService.addTask(this.newTask));
+        // this.toastService.showSuccess('Task added successfully', 'Success');
         this.resetEditMode();
         this.loadTasks();
       } catch (error) {
@@ -86,8 +85,8 @@ export class HomeComponent {
     if (this.taskToEdit) {
       this.showSpinner();
       try {
-        await firstValueFrom(this.taskService.updateTask(this.newTask));
-        this.toastService.showSuccess('Task updated successfully', 'Success');
+        // await firstValueFrom(this.taskService.updateTask(this.newTask));
+        // this.toastService.showSuccess('Task updated successfully', 'Success');
         this.resetEditMode();
         this.loadTasks();
       } catch (error) {
@@ -103,8 +102,8 @@ export class HomeComponent {
     task.completed = checkbox.checked;
     this.showSpinner();
     try {
-      await firstValueFrom(this.taskService.updateTask(task));
-      this.toastService.showSuccess('Task status updated successfully', 'Success');
+      // await firstValueFrom(this.taskService.updateTask(task));
+      // this.toastService.showSuccess('Task status updated successfully', 'Success');
       this.loadTasks();
     } catch (error) {
       console.error('Failed to update task status', error);
@@ -116,8 +115,8 @@ export class HomeComponent {
   async deleteTask(task: Task): Promise<void> {
     this.showSpinner();
     try {
-      await firstValueFrom(this.taskService.deleteTask(task._id!));
-      this.toastService.showSuccess('Task deleted successfully', 'Success');
+      // await firstValueFrom(this.taskService.deleteTask(task._id!));
+      // this.toastService.showSuccess('Task deleted successfully', 'Success');
       this.loadTasks();
     } catch (error) {
       console.error('Failed to delete task', error);
