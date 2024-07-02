@@ -1,37 +1,30 @@
-<div class="login-container">
-  <div class="welcomeGifDiv">
-    <img class="welcomeGif" src="https://media1.tenor.com/m/tM6pDOQYblQAAAAC/welcome-back-awesome.gif" alt="">
-  </div>
-  <p class="welcome-message">We're glad to have you here. Please log in to continue.</p>
-
-  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" class="form-control" id="username" name="username" required [(ngModel)]="username"
-        #usernameInput="ngModel">
-      @if (usernameInput.errors?.['required'] && usernameInput.touched) {
-      <div class="alert alert-danger">
-        Username is required.
-      </div>
-      }
+<div class="h-full flex flex-col items-center bg-muted">
+  <section hlmCard class="w-80 mt-10">
+    <div hlmCardHeader>
+      <h3 hlmCardTitle>We're glad to have you here.</h3>
+      <p hlmCardDescription>Please log in to continue.</p>
     </div>
 
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" name="password" required [(ngModel)]="password"
-        #passwordInput="ngModel">
-      @if (passwordInput.errors?.['required'] && passwordInput.touched) {
-      <div class="alert alert-danger">
-        Password is required.
-      </div>
-      }
-    </div>
+    <p hlmCardContent>
+      <img src="https://media1.tenor.com/m/tM6pDOQYblQAAAAC/welcome-back-awesome.gif" alt="">
+    </p>
 
-    <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+    <p hlmCardContent>
+      <label hlmLabel class="block">
+        Username
+        <input hlmInput class="w-full" />
+      </label>
 
-    <div class="links">
-      <a routerLink="/reset-password">Forgot Password?</a>
-      <a (click)="openSignupModal()">Not a member? Sign Up</a>
+      <label hlmLabel class="block">
+        Password
+        <input hlmInput class="w-full" type="password" />
+      </label>
+    </p>
+
+    <div hlmCardFooter class="justify-between">
+      <button hlmBtn variant="ghost">Forgot Password?</button>
+      <button hlmBtn>Login</button>
     </div>
-  </form>
+  </section>
+  <button hlmBtn variant='link'>Not a member? Sign Up</button>
 </div>

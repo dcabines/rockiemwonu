@@ -1,7 +1,7 @@
 // src/app/login.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { environment } from '../../../environments/environment ';
 
 interface User {
@@ -25,8 +25,9 @@ export class LoginService {
   }
 
   loginUser(user: User): Observable<any> {
-    const apiUrl = `${environment.apiUrl}/login`;
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(apiUrl, user, { headers });
+    return of(true);
+    // const apiUrl = `${environment.apiUrl}/login`;
+    // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    // return this.http.post(apiUrl, user, { headers });
   }
 }

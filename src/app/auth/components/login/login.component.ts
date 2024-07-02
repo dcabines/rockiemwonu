@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import {
-  MatDialog,
-} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { SignupComponent } from '../signup/signup.component';
 import { LoginService } from '../../../services/authservice/login.service';
 import { ToastService } from '../../../services/toast/toast.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import * as helm from '../../../../lib/helm';
+
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [...helm.directives],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
