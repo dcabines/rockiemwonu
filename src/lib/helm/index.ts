@@ -17,6 +17,7 @@ import { HlmDialogHeaderComponent } from './hlm-dialog-header.component';
 import { HlmDialogOverlayDirective } from './hlm-dialog-overlay.directive';
 import { HlmDialogTitleDirective } from './hlm-dialog-title.directive';
 import { HlmDialogComponent } from './hlm-dialog.component';
+import { BrnDialogContentDirective, BrnDialogTriggerDirective } from '@spartan-ng/ui-dialog-brain';
 
 export * from './hlm-button.directive';
 export * from './hlm-card-content.directive';
@@ -60,5 +61,7 @@ export default [
   HlmDialogHeaderComponent,
   HlmDialogOverlayDirective,
   HlmDialogTitleDirective,
-  HlmDialogComponent
+  HlmDialogComponent,
+  BrnDialogTriggerDirective,
+  BrnDialogContentDirective,
 ];

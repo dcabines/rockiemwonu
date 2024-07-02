@@ -3,9 +3,10 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation, computed, inject
 import { lucideX } from '@ng-icons/lucide';
 import { hlm } from '@spartan-ng/ui-core';
 import { BrnDialogCloseDirective, BrnDialogRef, injectBrnDialogContext } from '@spartan-ng/ui-dialog-brain';
-import { HlmIconComponent, provideIcons } from '@spartan-ng/ui-icon-helm';
 import type { ClassValue } from 'clsx';
 import { HlmDialogCloseDirective } from './hlm-dialog-close.directive';
+import { HlmIconComponent } from './hlm-icon.component';
+import { provideIcons } from '@ng-icons/core';
 
 @Component({
 	selector: 'hlm-dialog-content',

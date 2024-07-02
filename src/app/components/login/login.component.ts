@@ -4,10 +4,11 @@ import { map } from 'rxjs/operators';
 import { LetDirective } from '@ngrx/component';
 import helm from '@helm';
 import { selectors, actions, LoginForm } from '@store/login';
+import { SignupComponent } from '../signup/signup.component';
 
 @Component({
   standalone: true,
-  imports: [LetDirective, ...helm],
+  imports: [LetDirective, ...helm, SignupComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -23,5 +24,9 @@ export class LoginComponent {
 
   onLoginClick() {
     this.store.dispatch(actions.loginClicked());
+  }
+
+  onSignupClick() {
+    this.store.dispatch(actions.signupClicked());
   }
 }

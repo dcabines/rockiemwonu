@@ -6,7 +6,7 @@ export default createActionGroup({
   events: {
     LoginClicked: emptyProps(),
     ForgotPasswordClicked: emptyProps(),
-    RegisterClicked: emptyProps(),
+    SignupClicked: emptyProps(),
     FormChanged: props<{ changes: Partial<LoginForm> }>()
   }
 });
