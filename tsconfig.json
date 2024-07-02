@@ -24,6 +24,12 @@
     "paths": {
       "@helm": [
         "./src/lib/helm"
+      ],
+      "@store/*": [
+        "./src/store/*"
+      ],
+      "@spartan-ng/ui-dialog-helm": [
+        ".\\ui-dialog-helm/src/index.ts"
       ]
     }
   },

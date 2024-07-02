@@ -1,14 +1,12 @@
 import { createActionGroup, emptyProps, props } from '@ngrx/store';
-import { LoginForm } from './state';
+import { LoginForm } from './models/login-form';
 
-export default {
-  loginForm: createActionGroup({
-    source: 'Login Form',
-    events: {
-      LoginClicked: emptyProps(),
-      ForgotPasswordClicked: emptyProps(),
-      RegisterClicked: emptyProps(),
-      FormChanged: props<{ changes: Partial<LoginForm>; }>()
-    }
-  })
-}
+export default createActionGroup({
+  source: 'Login Form',
+  events: {
+    LoginClicked: emptyProps(),
+    ForgotPasswordClicked: emptyProps(),
+    RegisterClicked: emptyProps(),
+    FormChanged: props<{ changes: Partial<LoginForm> }>()
+  }
+});

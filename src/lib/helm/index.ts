@@ -9,20 +9,39 @@ import { HlmIconComponent } from './hlm-icon.component';
 import { HlmInputErrorDirective } from './hlm-input-error.directive';
 import { HlmInputDirective } from './hlm-input.directive';
 import { HlmLabelDirective } from './hlm-label.directive';
+import { HlmDialogCloseDirective } from './hlm-dialog-close.directive';
+import { HlmDialogContentComponent } from './hlm-dialog-content.component';
+import { HlmDialogDescriptionDirective } from './hlm-dialog-description.directive';
+import { HlmDialogFooterComponent } from './hlm-dialog-footer.component';
+import { HlmDialogHeaderComponent } from './hlm-dialog-header.component';
+import { HlmDialogOverlayDirective } from './hlm-dialog-overlay.directive';
+import { HlmDialogTitleDirective } from './hlm-dialog-title.directive';
+import { HlmDialogComponent } from './hlm-dialog.component';
 
-export { HlmButtonDirective } from './hlm-button.directive';
-export { HlmCardContentDirective } from './hlm-card-content.directive';
-export { HlmCardDescriptionDirective } from './hlm-card-description.directive';
-export { HlmCardFooterDirective } from './hlm-card-footer.directive';
-export { HlmCardHeaderDirective } from './hlm-card-header.directive';
-export { HlmCardTitleDirective } from './hlm-card-title.directive';
-export { HlmCardDirective } from './hlm-card.directive';
-export { HlmIconComponent } from './hlm-icon.component';
-export { HlmInputErrorDirective } from './hlm-input-error.directive';
-export { HlmInputDirective } from './hlm-input.directive';
-export { HlmLabelDirective } from './hlm-label.directive';
+export * from './hlm-button.directive';
+export * from './hlm-card-content.directive';
+export * from './hlm-card-description.directive';
+export * from './hlm-card-footer.directive';
+export * from './hlm-card-header.directive';
+export * from './hlm-card-title.directive';
+export * from './hlm-card.directive';
+export * from './hlm-icon.component';
+export * from './hlm-input-error.directive';
+export * from './hlm-input.directive';
+export * from './hlm-label.directive';
+export * from './hlm-dialog-close.directive';
+export * from './hlm-dialog-content.component';
+export * from './hlm-dialog-description.directive';
+export * from './hlm-dialog-footer.component';
+export * from './hlm-dialog-header.component';
+export * from './hlm-dialog-overlay.directive';
+export * from './hlm-dialog-title.directive';
+export * from './hlm-dialog.component';
+export * from './hlm-dialog.service';
 
-export const directives = [
+// https://www.spartan.ng
+
+export default [
   HlmButtonDirective,
   HlmCardContentDirective,
   HlmCardDescriptionDirective,
@@ -33,5 +52,13 @@ export const directives = [
   HlmIconComponent,
   HlmInputErrorDirective,
   HlmInputDirective,
-  HlmLabelDirective
+  HlmLabelDirective,
+  HlmDialogCloseDirective,
+  HlmDialogContentComponent,
+  HlmDialogDescriptionDirective,
+  HlmDialogFooterComponent,
+  HlmDialogHeaderComponent,
+  HlmDialogOverlayDirective,
+  HlmDialogTitleDirective,
+  HlmDialogComponent
 ];

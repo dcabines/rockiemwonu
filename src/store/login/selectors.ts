@@ -1,13 +1,5 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-
-export interface LoginForm {
-  username: string | null;
-  password: string | null;
-}
-
-export interface LoginState {
-  loginForm: LoginForm;
-}
+import { LoginState } from "./models/login-state";
 
 export const getLoginState = createFeatureSelector<LoginState>('login');
 

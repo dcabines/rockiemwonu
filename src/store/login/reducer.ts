@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { LoginState } from './state';
+import { LoginState } from './models/login-state';
 import actions from './actions';
 
 const initialState: LoginState = {
@@ -9,10 +9,10 @@ const initialState: LoginState = {
   }
 };
 
-export const loginReducer = createReducer(
+export const reducer = createReducer(
   initialState,
   on(
-    actions.loginForm.formChanged,
+    actions.formChanged,
     (state, { changes: loginForm }): LoginState => ({
       ...state,
       loginForm: { ...state.loginForm, ...loginForm }

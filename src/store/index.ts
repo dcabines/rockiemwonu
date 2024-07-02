@@ -1,5 +1,5 @@
 import { ActionReducerMap } from "@ngrx/store";
-import { LoginState, loginReducer } from "./login";
+import { LoginState, reducer as loginReducer } from "./login";
 
 export interface AppState {
   login: LoginState;

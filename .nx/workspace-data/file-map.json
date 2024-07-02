@@ -1,0 +1,384 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.3.2",
+  "deps": {
+    "@angular/animations": "^18.0.0",
+    "@angular/cdk": "^18.0.0",
+    "@angular/common": "^18.0.0",
+    "@angular/compiler": "^18.0.0",
+    "@angular/core": "^18.0.0",
+    "@angular/platform-browser": "^18.0.0",
+    "@angular/platform-browser-dynamic": "^18.0.0",
+    "@angular/router": "^18.0.0",
+    "@ng-icons/core": "^25.1.0",
+    "@ng-icons/lucide": "^28.1.0",
+    "@ngrx/component": "^18.0.1",
+    "@ngrx/effects": "^18.0.1",
+    "@ngrx/router-store": "^18.0.1",
+    "@ngrx/store": "^18.0.1",
+    "@ngrx/store-devtools": "^18.0.1",
+    "@spartan-ng/ui-core": "^0.0.1-alpha.352",
+    "@spartan-ng/ui-label-brain": "0.0.1-alpha.352",
+    "class-variance-authority": "^0.6.0",
+    "clsx": "^1.2.1",
+    "localstorage-polyfill": "^1.0.1",
+    "ngx-spinner": "^17.0.0",
+    "ngx-toastr": "^18.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3",
+    "@angular-devkit/build-angular": "^18.0.1",
+    "@angular/cli": "^18.0.1",
+    "@angular/compiler-cli": "^18.0.0",
+    "@spartan-ng/cli": "^0.0.1-alpha.360",
+    "@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-animate": "^1.0.6",
+    "typescript": "~5.4.2"
+  },
+  "pathMappings": {
+    "@helm": [
+      "./src/lib/helm"
+    ],
+    "@store/*": [
+      "./src/store/*"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "helloworld": [
+        {
+          "file": ".editorconfig",
+          "hash": "6686520031028425313"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "18168400278403753650"
+        },
+        {
+          "file": ".vscode/extensions.json",
+          "hash": "5331566439708925252"
+        },
+        {
+          "file": ".vscode/launch.json",
+          "hash": "17038929134016848735"
+        },
+        {
+          "file": ".vscode/tasks.json",
+          "hash": "5336636969995539451"
+        },
+        {
+          "file": "README.md",
+          "hash": "12723581077398141319"
+        },
+        {
+          "file": "angular.json",
+          "hash": "13562104843724962288"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "588856837866647749"
+        },
+        {
+          "file": "package.json",
+          "hash": "15305656434890280201",
+          "deps": [
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@spartan-ng/cli",
+            "npm:@types/jasmine",
+            "npm:jasmine-core",
+            "npm:karma",
+            "npm:karma-chrome-launcher",
+            "npm:karma-coverage",
+            "npm:karma-jasmine",
+            "npm:karma-jasmine-html-reporter",
+            "npm:tailwind-merge",
+            "npm:tailwindcss",
+            "npm:tailwindcss-animate",
+            "npm:typescript",
+            "npm:@angular/animations",
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:@ng-icons/core",
+            "npm:@ng-icons/lucide",
+            "npm:@ngrx/component",
+            "npm:@ngrx/effects",
+            "npm:@ngrx/router-store",
+            "npm:@ngrx/store",
+            "npm:@ngrx/store-devtools",
+            "npm:@spartan-ng/ui-core",
+            "npm:@spartan-ng/ui-label-brain",
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:localstorage-polyfill",
+            "npm:ngx-spinner",
+            "npm:ngx-toastr",
+            "npm:rxjs",
+            "npm:tslib",
+            "npm:zone.js"
+          ]
+        },
+        {
+          "file": "src/app/app.config.ts",
+          "hash": "4647302780149136588"
+        },
+        {
+          "file": "src/app/app.routes.ts",
+          "hash": "10622321528887446368"
+        },
+        {
+          "file": "src/app/components/app/app.component.html",
+          "hash": "848395303240231261"
+        },
+        {
+          "file": "src/app/components/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/app/app.component.spec.ts",
+          "hash": "5486521657406825490"
+        },
+        {
+          "file": "src/app/components/app/app.component.ts",
+          "hash": "12844755217794934997"
+        },
+        {
+          "file": "src/app/components/home/home.component.html",
+          "hash": "1279421735825174579"
+        },
+        {
+          "file": "src/app/components/home/home.component.scss",
+          "hash": "9547019235646729468"
+        },
+        {
+          "file": "src/app/components/home/home.component.spec.ts",
+          "hash": "5533293743300657749"
+        },
+        {
+          "file": "src/app/components/home/home.component.ts",
+          "hash": "15142429134168951167"
+        },
+        {
+          "file": "src/app/components/login/login.component.html",
+          "hash": "7256855046174795632"
+        },
+        {
+          "file": "src/app/components/login/login.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/login/login.component.spec.ts",
+          "hash": "13423884664040136397"
+        },
+        {
+          "file": "src/app/components/login/login.component.ts",
+          "hash": "17845436560643422567"
+        },
+        {
+          "file": "src/app/components/not-found/not-found.component.html",
+          "hash": "12152298580829345326"
+        },
+        {
+          "file": "src/app/components/not-found/not-found.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/not-found/not-found.component.spec.ts",
+          "hash": "13423884664040136397"
+        },
+        {
+          "file": "src/app/components/not-found/not-found.component.ts",
+          "hash": "9257204769934409418"
+        },
+        {
+          "file": "src/app/components/signup/signup.component.html",
+          "hash": "6829938515087590113"
+        },
+        {
+          "file": "src/app/components/signup/signup.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/app/components/signup/signup.component.spec.ts",
+          "hash": "14276676096443061721"
+        },
+        {
+          "file": "src/app/components/signup/signup.component.ts",
+          "hash": "3868251759162143815"
+        },
+        {
+          "file": "src/app/interceptors/auth.interceptor.spec.ts",
+          "hash": "8977071335741638093"
+        },
+        {
+          "file": "src/app/interceptors/auth.interceptor.ts",
+          "hash": "7436558185420482258"
+        },
+        {
+          "file": "src/app/services/authservice/login.service.spec.ts",
+          "hash": "6455698513478357297"
+        },
+        {
+          "file": "src/app/services/authservice/login.service.ts",
+          "hash": "2364594828980225703"
+        },
+        {
+          "file": "src/app/services/task/task.service.spec.ts",
+          "hash": "12144199161912751038"
+        },
+        {
+          "file": "src/app/services/task/task.service.ts",
+          "hash": "1852528467178013456"
+        },
+        {
+          "file": "src/app/services/toast/toast.service.spec.ts",
+          "hash": "17532437836695669978"
+        },
+        {
+          "file": "src/app/services/toast/toast.service.ts",
+          "hash": "14375371654406411677"
+        },
+        {
+          "file": "src/assets/images/dropdownsvg.png",
+          "hash": "2759710328853150082"
+        },
+        {
+          "file": "src/assets/images/not-found.webp",
+          "hash": "10551288944370241601"
+        },
+        {
+          "file": "src/assets/images/welcome-back-awesome.gif",
+          "hash": "11223790516419787986"
+        },
+        {
+          "file": "src/environments/environment .prod.ts",
+          "hash": "14795726269669176761"
+        },
+        {
+          "file": "src/environments/environment .ts",
+          "hash": "7684237948134354424"
+        },
+        {
+          "file": "src/index.html",
+          "hash": "6603049315422637432"
+        },
+        {
+          "file": "src/lib/helm/hlm-button.directive.ts",
+          "hash": "6707392129396539941"
+        },
+        {
+          "file": "src/lib/helm/hlm-card-content.directive.ts",
+          "hash": "3041435324140004025"
+        },
+        {
+          "file": "src/lib/helm/hlm-card-description.directive.ts",
+          "hash": "12315658723134421129"
+        },
+        {
+          "file": "src/lib/helm/hlm-card-footer.directive.ts",
+          "hash": "10972621399707141653"
+        },
+        {
+          "file": "src/lib/helm/hlm-card-header.directive.ts",
+          "hash": "10914822965028795660"
+        },
+        {
+          "file": "src/lib/helm/hlm-card-title.directive.ts",
+          "hash": "9057266089303559552"
+        },
+        {
+          "file": "src/lib/helm/hlm-card.directive.ts",
+          "hash": "7761636437151111445"
+        },
+        {
+          "file": "src/lib/helm/hlm-icon.component.ts",
+          "hash": "166660981264464896"
+        },
+        {
+          "file": "src/lib/helm/hlm-input-error.directive.ts",
+          "hash": "17996525915591253064"
+        },
+        {
+          "file": "src/lib/helm/hlm-input.directive.ts",
+          "hash": "16055712985749591970"
+        },
+        {
+          "file": "src/lib/helm/hlm-label.directive.ts",
+          "hash": "162448599590982201"
+        },
+        {
+          "file": "src/lib/helm/index.ts",
+          "hash": "18059533880115893644"
+        },
+        {
+          "file": "src/main.ts",
+          "hash": "15332424503505183867"
+        },
+        {
+          "file": "src/store/index.ts",
+          "hash": "12772789603680952525"
+        },
+        {
+          "file": "src/store/login/actions.ts",
+          "hash": "12743423739089185371"
+        },
+        {
+          "file": "src/store/login/index.ts",
+          "hash": "401203996028791804"
+        },
+        {
+          "file": "src/store/login/models/login-form.ts",
+          "hash": "6426029911845264239"
+        },
+        {
+          "file": "src/store/login/models/login-state.ts",
+          "hash": "7301946810232556884"
+        },
+        {
+          "file": "src/store/login/reducer.ts",
+          "hash": "17148710138779514945"
+        },
+        {
+          "file": "src/store/login/selectors.ts",
+          "hash": "16175949539227801276"
+        },
+        {
+          "file": "src/styles.scss",
+          "hash": "13195249741360985708"
+        },
+        {
+          "file": "tailwind.config.js",
+          "hash": "1255957865702120621"
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "16967610033140362389"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "1440204830907171685"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "15575553540147145788"
+        }
+      ]
+    },
+    "nonProjectFiles": []
+  }
+}
