@@ -1,39 +1,29 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
-import { LoginService } from '../../services/authservice/login.service';
-import { ToastService } from '../../services/toast/toast.service';
+import { Component, inject } from '@angular/core';
+import { Store } from '@ngrx/store';
 import * as helm from '@helm';
+import actions from '../../../store/login/actions';
+import { LoginForm } from '../../../store/login/state';
+import * as fromLoginForm from '../../../store/login';
+import { map } from 'rxjs/operators';
+import { LetDirective } from '@ngrx/component';
 
 @Component({
   standalone: true,
-  imports: [...helm.directives],
+  imports: [LetDirective, ...helm.directives],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  username: string = '';
-  password: string = '';
+  store = inject(Store);
+  loginForm$ = this.store.select(fromLoginForm.getLoginForm);
+  loginFormValid$ = this.store.select(fromLoginForm.getLoginFormValid);
+  loginButtonDisabled$ = this.loginFormValid$.pipe(map(loginFormValid => !loginFormValid));
 
-  constructor(private router: Router,
-    private loginService: LoginService,
-    private toastService: ToastService,
-    private spinner: NgxSpinnerService
-  ) { }
+  onFormChange(changes: Partial<LoginForm>) {
+    this.store.dispatch(actions.loginForm.formChanged({ changes }));
+  }
 
-  onLogin(user: any) {
-    this.loginService.loginUser(user).subscribe(
-      response => {
-        this.toastService.showSuccess('Login Successful');
-        localStorage.setItem('token', response.token);
-        this.spinner.hide();
-        this.router.navigate(['/home']);
-      },
-      error => {
-        this.spinner.hide();
-        this.toastService.showError('Login Failed', 'Error');
-        console.error('Login error:', error);
-      }
-    );
+  onLoginClick() {
+    this.store.dispatch(actions.loginForm.loginClicked());
   }
 }

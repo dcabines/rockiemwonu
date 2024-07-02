@@ -1,4 +1,4 @@
-<div class="h-full flex flex-col items-center bg-muted">
+<div class="h-full flex flex-col items-center bg-muted" *ngrxLet="loginForm$ as loginForm">
   <section hlmCard class="w-80 mt-10">
     <div hlmCardHeader>
       <h3 hlmCardTitle>We're glad to have you here.</h3>
@@ -12,19 +12,25 @@
     <p hlmCardContent>
       <label hlmLabel class="block">
         Username
-        <input hlmInput class="w-full" />
+        <input hlmInput #usernameInput class="w-full" (keyup)="onFormChange({ username: usernameInput.value })" />
       </label>
 
       <label hlmLabel class="block">
         Password
-        <input hlmInput class="w-full" type="password" />
+        <input hlmInput #passwordInput class="w-full" type="password"
+          (keyup)="onFormChange({ password: passwordInput.value })" />
       </label>
     </p>
 
     <div hlmCardFooter class="justify-between">
-      <button hlmBtn variant="ghost">Forgot Password?</button>
-      <button hlmBtn>Login</button>
+      <button hlmBtn variant="secondary">Forgot Password?</button>
+
+      <button hlmBtn  *ngrxLet="loginButtonDisabled$ as loginButtonDisabled" [disabled]="loginButtonDisabled"
+        (click)="onLoginClick()">
+        Login
+      </button>
     </div>
   </section>
-  <button hlmBtn variant='link'>Not a member? Sign Up</button>
+
+  <button hlmBtn variant="link">Not a member? Sign Up</button>
 </div>

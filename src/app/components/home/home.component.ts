@@ -1,11 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { firstValueFrom } from 'rxjs';
 
 export enum TaskPriority {
   Low = 'low',
@@ -26,7 +23,7 @@ interface Task {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule, NgxSpinnerModule, MatExpansionModule, CommonModule],
+  imports: [ NgxSpinnerModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
