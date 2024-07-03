@@ -1,4 +1,4 @@
-<hlm-dialog *ngrxLet="dialogOpen$ as dialogOpen" [state]="dialogOpen">
+<hlm-dialog *ngrxLet="dialogOpen$ as dialogOpen" [state]="dialogOpen" (closed)="onCloseClick()">
   <hlm-dialog-content *brnDialogContent="let ctx">
     <hlm-dialog-header>
       <h3 hlmDialogTitle>Sign Up</h3>

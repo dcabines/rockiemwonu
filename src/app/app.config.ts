@@ -11,7 +11,7 @@ import { provideEffects } from '@ngrx/effects';
 import { provideRouterStore } from '@ngrx/router-store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { routes } from './app.routes';
-import * as store from '../store';
+import { reducers, effects } from './store';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,8 +24,8 @@ export const appConfig: ApplicationConfig = {
     provideToastr(),
     provideHttpClient(withInterceptorsFromDi(), withFetch()),
     provideHttpClient(withInterceptors([authInterceptor])),
-    provideStore(store.reducers),
-    provideEffects(),
+    provideStore(reducers),
+    provideEffects(effects),
     provideRouterStore(),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
   ]

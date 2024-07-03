@@ -12,7 +12,7 @@ const initialState: LoginState = {
 export const reducer = createReducer(
   initialState,
   on(
-    actions.formChanged,
+    actions.loginForm.formChanged,
     (state, { changes: loginForm }): LoginState => ({
       ...state,
       loginForm: { ...state.loginForm, ...loginForm }

@@ -10,7 +10,7 @@ const initialState: SignupState = {
 export const reducer = createReducer(
   initialState,
   on(
-    loginActions.signupClicked,
+    loginActions.loginForm.signupClicked,
     (state): SignupState => ({
       ...state,
       dialogOpen: true

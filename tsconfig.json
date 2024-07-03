@@ -23,13 +23,16 @@
     ],
     "paths": {
       "@helm": [
-        "./src/lib/helm"
+        "./src/app/lib/helm"
+      ],
+      "@app/*": [
+        "./src/app/*"
       ],
       "@store/*": [
-        "./src/store/*"
+        "./src/app/store/*"
       ],
-      "@spartan-ng/ui-dialog-helm": [
-        ".\\ui-dialog-helm/src/index.ts"
+      "@environment": [
+        "./src/environments/environment"
       ]
     }
   },

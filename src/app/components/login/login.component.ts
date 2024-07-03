@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { map } from 'rxjs/operators';
 import { LetDirective } from '@ngrx/component';
 import helm from '@helm';
 import { selectors, actions, LoginForm } from '@store/login';
-import { SignupComponent } from '../signup/signup.component';
+import { SignupComponent } from '@app/components/signup/signup.component';
 
 @Component({
   standalone: true,
@@ -16,17 +15,16 @@ export class LoginComponent {
   store = inject(Store);
   loginForm$ = this.store.select(selectors.getLoginForm);
   loginFormValid$ = this.store.select(selectors.getLoginFormValid);
-  loginButtonDisabled$ = this.loginFormValid$.pipe(map(loginFormValid => !loginFormValid));
 
   onFormChange(changes: Partial<LoginForm>) {
-    this.store.dispatch(actions.formChanged({ changes }));
+    this.store.dispatch(actions.loginForm.formChanged({ changes }));
   }
 
   onLoginClick() {
-    this.store.dispatch(actions.loginClicked());
+    this.store.dispatch(actions.loginForm.loginClicked());
   }
 
   onSignupClick() {
-    this.store.dispatch(actions.signupClicked());
+    this.store.dispatch(actions.loginForm.signupClicked());
   }
 }

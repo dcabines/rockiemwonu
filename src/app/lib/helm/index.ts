@@ -1,3 +1,4 @@
+import { BrnDialogContentDirective, BrnDialogTriggerDirective } from '@spartan-ng/ui-dialog-brain';
 import { HlmButtonDirective } from './hlm-button.directive';
 import { HlmCardContentDirective } from './hlm-card-content.directive';
 import { HlmCardDescriptionDirective } from './hlm-card-description.directive';
@@ -17,7 +18,7 @@ import { HlmDialogHeaderComponent } from './hlm-dialog-header.component';
 import { HlmDialogOverlayDirective } from './hlm-dialog-overlay.directive';
 import { HlmDialogTitleDirective } from './hlm-dialog-title.directive';
 import { HlmDialogComponent } from './hlm-dialog.component';
-import { BrnDialogContentDirective, BrnDialogTriggerDirective } from '@spartan-ng/ui-dialog-brain';
+import { HlmToasterComponent } from './hlm-toaster.component';
 
 export * from './hlm-button.directive';
 export * from './hlm-card-content.directive';
@@ -39,10 +40,13 @@ export * from './hlm-dialog-overlay.directive';
 export * from './hlm-dialog-title.directive';
 export * from './hlm-dialog.component';
 export * from './hlm-dialog.service';
+export * from './hlm-toaster.component';
 
 // https://www.spartan.ng
 
 export default [
+  BrnDialogTriggerDirective,
+  BrnDialogContentDirective,
   HlmButtonDirective,
   HlmCardContentDirective,
   HlmCardDescriptionDirective,
@@ -62,6 +66,5 @@ export default [
   HlmDialogOverlayDirective,
   HlmDialogTitleDirective,
   HlmDialogComponent,
-  BrnDialogTriggerDirective,
-  BrnDialogContentDirective,
+  HlmToasterComponent
 ];

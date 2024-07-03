@@ -24,15 +24,11 @@
 
     <div hlmCardFooter class="justify-between">
       <button hlmBtn variant="secondary">Forgot Password?</button>
-
-      <button hlmBtn *ngrxLet="loginButtonDisabled$ as loginButtonDisabled" [disabled]="loginButtonDisabled"
-        (click)="onLoginClick()">
-        Login
-      </button>
+      <button hlmBtn (click)="onLoginClick()">Login</button>
     </div>
   </section>
 
   <button hlmBtn variant="link" (click)="onSignupClick()">Not a member? Sign Up</button>
 </div>
 
-<app-signup></app-signup>
+<app-signup />
