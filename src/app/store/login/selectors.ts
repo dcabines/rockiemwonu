@@ -10,5 +10,5 @@ export const getLoginForm = createSelector(
 
 export const getLoginFormValid = createSelector(
   getLoginForm,
-  loginForm => Boolean(loginForm.username) && Boolean(loginForm.password)
+  loginForm => Boolean(loginForm.username.value) && Boolean(loginForm.password.value)
 );

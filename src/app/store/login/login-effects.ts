@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { map, tap, mergeMap, catchError, filter, withLatestFrom } from 'rxjs/operators';
-import actions from './actions';
+import * as actions from './actions';
 import * as selectors from './selectors';
 import { SessionService } from '@app/clients/session/session';
 import { Credentials } from '@app/clients/session/models/credentials';
@@ -23,8 +23,8 @@ export class LoginEffects {
       withLatestFrom(
         this.store.select(selectors.getLoginForm),
         (_, loginForm): Credentials => ({
-          username: loginForm.username!,
-          password: loginForm.password!
+          username: loginForm.username.value!,
+          password: loginForm.password.value!
         })
       ),
       tap(credentials => this.store.dispatch(actions.login.started({ credentials }))),

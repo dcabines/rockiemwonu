@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 import { SignupState } from './models/signup-state';
 import { actions as loginActions } from '@store/login';
-import actions from './actions';
+import * as actions from './actions';
 
 const initialState: SignupState = {
   dialogOpen: false
@@ -17,7 +17,7 @@ export const reducer = createReducer(
     })
   ),
   on(
-    actions.closeClicked,
+    actions.signup.closeClicked,
     (): SignupState => ({
       ...initialState
     })

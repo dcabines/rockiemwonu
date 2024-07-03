@@ -12,12 +12,15 @@
     <p hlmCardContent>
       <label hlmLabel class="block">
         Username
-        <input hlmInput #usernameInput class="w-full" (keyup)="onFormChange({ username: usernameInput.value })" />
+        <input hlmInput #usernameInput class="w-full" [value]="loginForm.username.value"
+          [ngClass]="{ 'ng-touched': loginForm.username.touched, 'ng-invalid': !loginForm.username.value }"
+          (keyup)="onFormChange({ username: usernameInput.value })" />
       </label>
 
       <label hlmLabel class="block">
         Password
-        <input hlmInput #passwordInput class="w-full" type="password"
+        <input hlmInput #passwordInput class="w-full" type="password" [value]="loginForm.password.value"
+          [ngClass]="{ 'ng-touched': loginForm.password.touched, 'ng-invalid': !loginForm.password.value }"
           (keyup)="onFormChange({ password: passwordInput.value })" />
       </label>
     </p>

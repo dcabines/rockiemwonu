@@ -1,4 +1,4 @@
-import actions from './actions';
+import * as actions from './actions';
 import * as selectors from './selectors';
 import { reducer } from './reducer';
 import { LoginState } from './models/login-state';

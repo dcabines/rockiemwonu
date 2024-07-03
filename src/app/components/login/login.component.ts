@@ -4,10 +4,11 @@ import { LetDirective } from '@ngrx/component';
 import helm from '@helm';
 import { selectors, actions, LoginForm } from '@store/login';
 import { SignupComponent } from '@app/components/signup/signup.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [LetDirective, ...helm, SignupComponent],
+  imports: [CommonModule, LetDirective, ...helm, SignupComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

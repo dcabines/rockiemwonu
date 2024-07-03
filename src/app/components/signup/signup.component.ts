@@ -20,5 +20,5 @@ export class SignupComponent {
     map((dialogOpen): BrnDialogState => (dialogOpen ? 'open' : 'closed'))
   );
 
-  onCloseClick = () => this.store.dispatch(actions.closeClicked());
+  onCloseClick = () => this.store.dispatch(actions.signup.closeClicked());
 }

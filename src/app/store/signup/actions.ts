@@ -1,6 +1,6 @@
 import { createActionGroup, emptyProps, props } from '@ngrx/store';
 
-export default createActionGroup({
+export const signup = createActionGroup({
   source: 'Signup Dialog',
   events: {
     CloseClicked: emptyProps()
